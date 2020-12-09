@@ -2,7 +2,7 @@
 #include "Base.h"
 #include "Arc.h"
 class bArc :
-    public Base,
+    virtual public Base,
     public Arch
 {
 public:
@@ -25,7 +25,7 @@ public:
             ", y = " << coor.getCoor(1) <<
             ", scale = " << scale << 
             ", sweep = " << arcSwp << "rad" <<
-            ", rotation = " << rotation << " rad" <<"\n";
+            ", rotation = " << rotation << " rad" <<"\n\n";
         TFlush();
     }
 };

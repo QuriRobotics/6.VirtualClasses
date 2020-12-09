@@ -42,6 +42,7 @@ public:
 		{
 			tmp->Print();
 			tmp = tmp->next;
+			Sleep(1);
 		}
 	}
 };

@@ -1,7 +1,8 @@
 //#include "vstub.h"
 #include "bLine.h"
 #include "bArc.h"
-#include "Base.h"
+#include "bSegment.h"
+#include "bSector.h"
 
 #define M_PI 3.1415926
 
@@ -27,7 +28,21 @@ int main(void)
 	bArc arc1(Point(200, 200), Color(15, 89, 125), 20, 3.0/4*M_PI, 2);
 	bArc arc2(Point(100, 150), Color::GREEN(), 20, M_PI);
 
+	bSector sec(Point(250, 150), Color::RED(), 20, 3.0 / 4 * M_PI, 1);
+
+	vgetchar();
+
+	//arc2.translate(Point(-10, -15));
+
+	/*for (int i = 0; i < 1000; i++)
+	{
+		seg.bSegment::Figure::setRotationCl(0.01*i);
+		seg.draw();
+		Sleep(2);
+	}*/
+
 	Base::PrintAll();
+	TFlush();
 
 
 	vgetchar();

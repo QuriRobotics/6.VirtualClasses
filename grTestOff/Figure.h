@@ -53,6 +53,10 @@ public:
 		color.apply();
 		draw();
 	}
+	void setRotationCl(double rot)
+	{
+		rotation = rot;
+	}
 	void setScale(double sc)
 	{
 		bcolor.apply();

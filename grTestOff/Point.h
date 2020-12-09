@@ -40,9 +40,14 @@ public:
 		Point out = Point(this->x + cos(angle) * scale, this->y + sin(angle) * scale);
 		return out;
 	}
+	double getDir(Point p)
+	{
+		return atan2(p.y - y, p.x - x);
+	}
 
 	friend void drawline(Point p1, Point p2);
 	friend void drawarc(Point p1, int radius, double StartAngle, double SweepAngle);
 	friend Point operator+(Point a, Point b);
+	friend double getDist(Point a, Point b);
 };
 
