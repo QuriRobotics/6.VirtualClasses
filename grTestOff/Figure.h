@@ -45,6 +45,22 @@ public:
 		color.apply();
 		draw();
 	}
+	void setRotation(double rot)
+	{
+		bcolor.apply();
+		draw();
+		rotation = rot;
+		color.apply();
+		draw();
+	}
+	void setScale(double sc)
+	{
+		bcolor.apply();
+		draw();
+		scale = sc;
+		color.apply();
+		draw();
+	}
 	virtual void draw() = 0;
 };
 

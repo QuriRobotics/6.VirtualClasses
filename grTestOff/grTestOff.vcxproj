@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arc.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Line.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="vstub.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arc.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Line.h" />

@@ -1,18 +1,21 @@
 //#include "vstub.h"
 #include "Line.h"
+#include "Arc.h"
+
+#define M_PI 3.1415926
 
 int main(void)
 {
-	//Line::bcolor = Color(0,0,0);
-
 	Line line(Point(50, 50), Color::RED(), 100, 1);
+	Arch arc(Point(100, 150), Color::RED(), 20, M_PI);
 	//line.draw();
 	vgetchar();
 
-	for (double r = 0; r <= 1; r += 0.01)
+	for (double r = 0; r <= 0.1; r += 0.001)
 	{
 		line.translate(Point(1, 2), r);
-		Sleep(100);
+		arc.translate(Point(2, 1));
+		Sleep(10);
 	}
 
 

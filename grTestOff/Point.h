@@ -31,6 +31,7 @@ public:
 	}
 
 	friend void drawline(Point p1, Point p2);
+	friend void drawarc(Point p1, int radius, double StartAngle, double SweepAngle);
 	friend Point operator+(Point a, Point b);
 };
 
