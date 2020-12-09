@@ -35,6 +35,8 @@ class vcstreambuf;
 extern vcstreambuf vcsb;
 extern std::ostream vc;
 
+void test6();
+
 int main (void);
 
 int vgetchar (void);

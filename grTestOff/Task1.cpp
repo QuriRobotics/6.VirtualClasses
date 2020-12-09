@@ -1,13 +1,15 @@
 //#include "vstub.h"
 #include "Line.h"
 #include "Arc.h"
+#include "Base.h"
 
 #define M_PI 3.1415926
 
-int main(void)
+void test5()
 {
+
 	Line line(Point(50, 50), Color::RED(), 100, 1);
-	Arch arc(Point(100, 150), Color::RED(), 20, M_PI);
+	Arch arc(Point(100, 150), Color(15, 89, 125), 20, M_PI);
 	//line.draw();
 	vgetchar();
 
@@ -17,6 +19,14 @@ int main(void)
 		arc.translate(Point(2, 1));
 		Sleep(10);
 	}
+}
+
+int main(void)
+{
+	Base();
+	Base test("Ku");
+	Base arc("Arc");
+	Base::PrintAll();
 
 
 	vgetchar();
