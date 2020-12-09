@@ -1,54 +1,33 @@
 //#include "vstub.h"
 #include "bLine.h"
 #include "bArc.h"
+#include "bLineWrapper.h"
 #include "bSegment.h"
 #include "bSector.h"
+#include "Line.h"
+#include "Arc.h"
 
 #define M_PI 3.1415926
 
-void test5()
-{
-	Line line(Point(50, 50), Color::RED(), 100, 1);
-	Arch arc(Point(100, 150), Color(250, 89, 125), 20, M_PI);
-	//line.draw();
-	vgetchar();
-
-	for (double r = 0; r <= 0.1; r += 0.001)
-	{
-		line.translate(Point(1, 2), r);
-		arc.translate(Point(2, 1));
-		Sleep(10);
-	}
-}
-
-void test7()
-{
-
-	bLine bline1(Point(50, 50), Color::RED(), 100, 1);
-	bLine bline2(Point(20, 50), Color::BLUE(), 10, -0.2);
-	bArc arc1(Point(200, 200), Color(15, 89, 125), 20, 3.0 / 4 * M_PI, 2);
-	bArc arc2(Point(100, 150), Color::GREEN(), 20, M_PI);
-
-	bSector sec(Point(250, 150), Color::RED(), 20, 8.0 / 6 * M_PI, 1);
-
-	vgetchar();
-
-	//arc2.translate(Point(-10, -15));
-
-	/*for (int i = 0; i < 1000; i++)
-	{
-	seg.bSegment::Figure::setRotationCl(0.01*i);
-	seg.draw();
-	Sleep(2);
-	}*/
-
-	Base::PrintAll();
-	TFlush();
-}
-
 int main(void)
 {
-	test7();
+	bLineWrapper line(Point(100, 25), Point(50, 100), Point(0, 0), Color::RED());
+	bArc arc(Point(100, 100), 30, 2, 1, Point(50, 100), Color::RED());
+	bSegment seg(Point(150, 150), 30, 0, 1.5, Point(150, 150), Color::GREEN());
+	//bSector sec(Point(100, 200), 50, -0.5, 1.5, Point(100, 200), Color::BLUE());
+
+	Figure* sec = new bSector(Point(100, 200), 50, -0.5, 1.5, Point(100, 200), Color::BLUE());
+
+	Base::PrintAll();
+
+	vgetchar();
+
+	arc.translate(Point(10,40)); // Figure->seg = new bSegment
+	line.translate(Point(10, 40)); // Base->sec = new bSector
+	seg.translate(Point(50, 70));
+	sec->translate(Point(80, -20)); // координаты привязать к точке привязки
+
+	Base::PrintAll();
 
 	vgetchar();
 	return 0;

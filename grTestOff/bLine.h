@@ -3,34 +3,36 @@
 #include "Line.h"
 class bLine :
     public Base,
-    public Line
+    public Line,
+    virtual public Figure
 {
 public:
-    bLine(Point p, Color c, double s = 1, double r = 0) : 
-        Line(p, c, s, r), 
-        Base("Line")
+    bLine(Point p1, Point p2, Point p, Color c, double s = 1) : 
+        Line(p1, p2, p, c, s), 
+        Base("Line"),
+        Figure(p, c, s)
     {
-        draw();
-    }
-    bLine(Point p1, Point p2, Color c) : 
-        Line(p1, c, getDist(p1,p2), p1.getDir(p2)), 
-        Base("Line")
-    {
+        color.apply();
         draw();
     }
 
+    /*void move(Point offset)
+    {
+        bcolor.apply();
+        draw();
+        p1 = p1 + offset;
+        p2 = p2 + offset;
+    }*/
     void draw()
     {
-        drawline(coor, coor.rotransl(rotation, scale));
+        drawline(p1, p2);
     }
     void Print()
     {
         //printf("%d. %s\n", order, name);
         vc << Base::order << ". " << Base::name <<
             ": x = " << coor.getCoor(0) << 
-            ", y = " << coor.getCoor(1) << 
-            ", rotation = " << rotation << " rad" << 
-            ", scale = " << scale << "\n\n";
+            ", y = " << coor.getCoor(1) << "\n\n";
         TFlush();
     }
 };

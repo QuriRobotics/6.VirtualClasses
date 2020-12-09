@@ -141,12 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arc.cpp" />
-    <ClCompile Include="bArc.cpp" />
     <ClCompile Include="Base.cpp" />
-    <ClCompile Include="bLine.cpp" />
-    <ClCompile Include="bLineWrapper.cpp" />
-    <ClCompile Include="bSector.cpp" />
-    <ClCompile Include="bSegment.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Line.cpp" />

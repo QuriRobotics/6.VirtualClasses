@@ -3,29 +3,29 @@
 #include "Arc.h"
 class bArc :
     public Base,
-    public Arch
+    public Arch,
+    virtual public Figure
 {
 public:
-    bArc(Point p, Color c, double s = 1, double sweep = 2 * 3.1415926, double r = 0): 
-        Arch(p, c, s, sweep, r),
-        Base("Arc")
+    bArc(Point pp1, int radius, double rot, double swp, Point p, Color c, double s = 1):
+        Arch(pp1 , radius, rot, swp, p, c, s),
+        Base("Arc"),
+        Figure(p, c, s)
     {
+        color.apply();
         draw();
     }
 
     void draw()
     {
-        drawarc(coor, scale, rotation, arcSwp);
+        drawarc(p1, r, angle, sweep);
     }
     void Print()
     {
         //printf("%d. %s\n", order, name);
         vc << Base::order << ". " << Base::name <<
             ": x = " << coor.getCoor(0) <<
-            ", y = " << coor.getCoor(1) <<
-            ", scale = " << scale << 
-            ", sweep = " << arcSwp << "rad" <<
-            ", rotation = " << rotation << " rad" <<"\n\n";
+            ", y = " << coor.getCoor(1) << "\n\n";
         TFlush();
     }
 };

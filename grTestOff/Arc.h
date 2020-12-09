@@ -1,25 +1,34 @@
 #pragma once
 #include "Figure.h"
 class Arch :
-    public Figure
+    virtual public Figure
 {
 protected:
-    double arcSwp;
+    Point p1;
+    int r;
+    double angle;
+    double sweep;
 public:
-    Arch(Point p, Color c, double s = 1, double sweep = 2 * 3.1415926, double r = 0) :Figure(p, c, s, r)
+    Arch(Point pp1, int radius, double rot, double swp, Point p, Color c, double s = 1) :Figure(p, c, s)
     {
-        arcSwp = sweep;
+        p1 = pp1;
+        r = radius;
+        angle = rot;
+        sweep = swp;
         draw();
     }
 
-    void setArcSweep(double sweep)
+    void move(Point offset)
     {
-        arcSwp = sweep;
+        bcolor.apply();
+        draw();
+        p1 = p1 + offset;
+        color.apply();
+        draw();
     }
-
     void draw()
     {
-        drawarc(coor, scale, rotation, arcSwp);
+        drawarc(p1, r, angle, sweep);
     }
 };
 

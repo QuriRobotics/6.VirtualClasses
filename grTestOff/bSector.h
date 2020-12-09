@@ -8,28 +8,27 @@ class bSector :
 	public bArc,
 	public bLine,
 	public bLineWrapper,
-	public Figure
+	virtual public Figure
 {
 public:
-	bSector(Point p, Color c, double s = 10, double sw = 1, double r = 0) :
+	bSector(Point pp1, int radius, double rot, double swp, Point p, Color c, double s = 1) :
 		Base("Sector"),
-		Figure(p, c, s, r),
-		bArc(p, c, s, sw, r),
-		bLine(p, p.rotransl(-r, s), c),
-		bLineWrapper(p, p.rotransl(-r - sw, s), c)
+		Figure(p, c, s),
+		bArc(pp1, radius, rot, swp, p, c, s),
+		bLine(pp1, pp1.rotransl(-rot - swp, radius), p, c, s),
+		bLineWrapper(pp1, pp1.rotransl(-rot, radius), p, c, s)
 	{
 
+	}
+	void move(Point offset)
+	{
+		bArc::move(offset);
+		bLine::move(offset);
+		bLineWrapper::move(offset);
 	}
 
 	void draw()
 	{
-		//bArc(Figure::coor, Figure::color, Figure::scale, arcSwp, Figure::rotation);
-
-		//Point p1 = Figure::coor.rotransl(Figure::rotation, Figure::scale);
-		//Point p2 = Figure::coor.rotransl(Figure::rotation + arcSwp, Figure::scale);
-
-		//bLine(p1, p2, Figure::color);
-
 		bArc::draw();
 		bLine::draw();
 		bLineWrapper::draw();
@@ -43,10 +42,7 @@ public:
 		//printf("%d. %s\n", order, name);
 		vc << Base::order << ". " << Base::name <<
 			": x = " << bArc::coor.getCoor(0) <<
-			", y = " << bArc::coor.getCoor(1) <<
-			", scale = " << bArc::scale <<
-			", sweep = " << arcSwp << "rad" <<
-			", rotation = " << bArc::rotation << " rad" << "\n\n";
+			", y = " << bArc::coor.getCoor(1) << "\n\n";
 		TFlush();
 	}
 };

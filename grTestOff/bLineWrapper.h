@@ -1,17 +1,15 @@
 #pragma once
 #include "bLine.h"
 class bLineWrapper :
-    public bLine
+    public bLine,
+    virtual public Figure
 {
 public:
-    bLineWrapper(Point p, Color c, double s = 1, double r = 0) :
-        bLine(p, c, s, r)
+    bLineWrapper(Point p1, Point p2, Point p, Color c, double s = 1) :
+        bLine(p1, p2, p, c, s),
+        Figure(p, c, s)
     {
-        draw();
-    }
-    bLineWrapper(Point p1, Point p2, Color c) :
-        bLine(p1, c, getDist(p1, p2), p1.getDir(p2))
-    {
+        color.apply();
         draw();
     }
 };

@@ -16,6 +16,17 @@ Point operator+(Point a, Point b)
 	return sum;
 }
 
+Point operator-(Point a, Point b)
+{
+	Point sum(a.x - b.x, a.y - b.y);
+	return sum;
+}
+
+Point operator*(double a, Point b)
+{
+	return Point(b.x * a, b.y * a);
+}
+
 double getDist(Point a, Point b)
 {
 	return sqrt((a.x-b.x)*(a.x-b.x) + (a.y - b.y) * (a.y - b.y));

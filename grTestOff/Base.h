@@ -25,11 +25,11 @@ public:
 	}
 	~Base()
 	{
-		head = next;
+		head = next; // нормальное удаление
 	}
 
 	virtual void Print() = 0;
-	//virtual void Print()
+	//virtual void Print() // это нормально, раскомментить
 	//{
 	//	//printf("%d. %s\n", order, name);
 	//	vc << order << ". " << name << "\n";

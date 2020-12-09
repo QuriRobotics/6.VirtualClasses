@@ -5,8 +5,8 @@
 class Point
 {
 protected:
-	int x, y;
 public:
+	int x, y;
 	Point() {}
 	Point(int x, int y)
 	{
@@ -48,6 +48,8 @@ public:
 	friend void drawline(Point p1, Point p2);
 	friend void drawarc(Point p1, int radius, double StartAngle, double SweepAngle);
 	friend Point operator+(Point a, Point b);
+	friend Point operator-(Point a, Point b);
+	friend Point operator*(double a, Point b);
 	friend double getDist(Point a, Point b);
 };
 
