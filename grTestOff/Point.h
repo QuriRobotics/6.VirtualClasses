@@ -4,7 +4,7 @@
 
 class Point
 {
-private:
+protected:
 	int x, y;
 public:
 	Point() {}
@@ -18,6 +18,17 @@ public:
 		this->x = a.x;
 		this->y = a.y;
 	}*/
+
+	int getCoor(int n)
+	{
+		switch (n)
+		{
+		case 0:
+			return x;
+		case 1:
+			return y;
+		}
+	}
 
 	void operator=(Point a)
 	{

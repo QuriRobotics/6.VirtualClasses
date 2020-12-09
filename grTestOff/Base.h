@@ -23,13 +23,18 @@ public:
 
 		head = this;
 	}
-
-	virtual void Print()
+	~Base()
 	{
-		//printf("%d. %s\n", order, name);
-		vc << order << ". " << name << "\n";
-		TFlush();
+		head = next;
 	}
+
+	virtual void Print() = 0;
+	//virtual void Print()
+	//{
+	//	//printf("%d. %s\n", order, name);
+	//	vc << order << ". " << name << "\n";
+	//	TFlush();
+	//}
 	static void PrintAll()
 	{
 		Base* tmp = head;

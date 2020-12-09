@@ -34,12 +34,18 @@ public:
 
 	static Color BLACK()
 	{
-		Color c(0, 0, 0);
-		return c;
+		return Color(0,0,0);
 	}
 	static Color RED()
 	{
-		Color c(255, 0, 0);
-		return c;
+		return Color(255, 0, 0);
+	}
+	static Color GREEN()
+	{
+		return Color(0, 255, 0);
+	}
+	static Color BLUE()
+	{
+		return Color(0, 0, 255);
 	}
 };

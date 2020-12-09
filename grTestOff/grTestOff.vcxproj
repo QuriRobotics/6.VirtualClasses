@@ -141,7 +141,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arc.cpp" />
+    <ClCompile Include="bArc.cpp" />
     <ClCompile Include="Base.cpp" />
+    <ClCompile Include="bLine.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Line.cpp" />
@@ -151,7 +153,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arc.h" />
+    <ClInclude Include="bArc.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="bLine.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Line.h" />
