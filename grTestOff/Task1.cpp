@@ -1,17 +1,22 @@
-#include "vstub.h"
+//#include "vstub.h"
+#include "Line.h"
 
-int main(void){
-  drawgrid();
-  vgetchar();
-  setcolor (255,0,255);
-  drawline (0,0,400,400);
-  vgetchar();
-  setcolor (0,255,255);
-  drawline (400,0,0,400);
-  vgetchar();
-  vc << "\nText example";
-  TFlush();
-  vgetchar();
-  return 0;
+int main(void)
+{
+	//Line::bcolor = Color(0,0,0);
+
+	Line line(Point(50, 50), Color::RED(), 100, 1);
+	//line.draw();
+	vgetchar();
+
+	for (double r = 0; r <= 1; r += 0.01)
+	{
+		line.translate(Point(1, 2), r);
+		Sleep(100);
+	}
+
+
+	vgetchar();
+	return 0;
 }
 
