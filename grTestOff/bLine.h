@@ -2,7 +2,7 @@
 #include "Base.h"
 #include "Line.h"
 class bLine :
-    virtual public Base,
+    public Base,
     public Line
 {
 public:
@@ -26,7 +26,7 @@ public:
     void Print()
     {
         //printf("%d. %s\n", order, name);
-        vc << order << ". " << name <<
+        vc << Base::order << ". " << Base::name <<
             ": x = " << coor.getCoor(0) << 
             ", y = " << coor.getCoor(1) << 
             ", rotation = " << rotation << " rad" << 

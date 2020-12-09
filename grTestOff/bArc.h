@@ -2,7 +2,7 @@
 #include "Base.h"
 #include "Arc.h"
 class bArc :
-    virtual public Base,
+    public Base,
     public Arch
 {
 public:
@@ -20,7 +20,7 @@ public:
     void Print()
     {
         //printf("%d. %s\n", order, name);
-        vc << order << ". " << name <<
+        vc << Base::order << ". " << Base::name <<
             ": x = " << coor.getCoor(0) <<
             ", y = " << coor.getCoor(1) <<
             ", scale = " << scale << 

@@ -4,7 +4,7 @@
 #include "bLine.h"
 #include "bLineWrapper.h"
 class bSector :
-	virtual public Base,
+	public Base,
 	public bArc,
 	public bLine,
 	public bLineWrapper,
@@ -37,8 +37,11 @@ public:
 
 	void Print()
 	{
+		bArc::Print();
+		bLine::Print();
+		bLineWrapper::Print();
 		//printf("%d. %s\n", order, name);
-		vc << order << ". " << name <<
+		vc << Base::order << ". " << Base::name <<
 			": x = " << bArc::coor.getCoor(0) <<
 			", y = " << bArc::coor.getCoor(1) <<
 			", scale = " << bArc::scale <<

@@ -2,7 +2,7 @@
 #include "bArc.h"
 #include "bLine.h"
 class bSegment:
-	virtual public Base,
+	public Base,
 	public bArc,
 	public bLine,
 	public Figure
@@ -19,11 +19,11 @@ public:
 
 	void draw()
 	{
-		Color::BLACK().apply();
+		//Color::BLACK().apply();
 		bArc::draw();
 		bLine::draw();
 
-		bSegment(Figure::coor, Figure::color, Figure::scale, arcSwp, Figure::rotation);
+		//bSegment(Figure::coor, Figure::color, Figure::scale, arcSwp, Figure::rotation);
 
 		//bArc(Figure::coor, Figure::color, Figure::scale, arcSwp, Figure::rotation);
 
@@ -38,8 +38,10 @@ public:
 
 	void Print()
 	{
+		bArc::Print();
+		bLine::Print();
 		//printf("%d. %s\n", order, name);
-		vc << order << ". " << name <<
+		vc << Base::order << ". " << Base::name <<
 			": x = " << bArc::coor.getCoor(0) <<
 			", y = " << bArc::coor.getCoor(1) <<
 			", scale = " << bArc::scale <<

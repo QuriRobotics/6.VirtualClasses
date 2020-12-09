@@ -37,6 +37,8 @@ extern std::ostream vc;
 
 void test6();
 
+void test7();
+
 int main (void);
 
 int vgetchar (void);
