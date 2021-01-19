@@ -25,15 +25,14 @@ public:
 	}
 	void translate(Point offset)
 	{
-		coor = coor + offset;
 		bcolor.apply();
 		draw();
-		move(offset);
+		coor = coor + offset;
+		//move(offset);
 		color.apply();
 		draw();
 	}
 
-	virtual void move(Point offset) = 0;
 	virtual void draw() = 0;
 };
 

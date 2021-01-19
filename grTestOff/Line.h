@@ -15,21 +15,12 @@ public:
         draw();
     }
 
-    void move(Point offset)
-    {
-        bcolor.apply();
-        draw();
-        p1 = p1 + offset;
-        p2 = p2 + offset;
-        color.apply();
-        draw();
-    }
     void draw()
     {
-        //Point pp1, pp2;
-        //pp1 = p + s * (p1 - p);
-        //pp2 = p + s * (p2 - p);
-        drawline(p1, p2);
+        Point pp1, pp2;
+        pp1 = coor + p1;
+        pp2 = coor + p2;
+        drawline(pp1, pp2);
     }
 };
 

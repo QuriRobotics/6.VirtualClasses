@@ -18,17 +18,9 @@ public:
         draw();
     }
 
-    void move(Point offset)
-    {
-        bcolor.apply();
-        draw();
-        p1 = p1 + offset;
-        color.apply();
-        draw();
-    }
     void draw()
     {
-        drawarc(p1, r, angle, sweep);
+        drawarc(p1 + coor, r, angle, sweep);
     }
 };
 

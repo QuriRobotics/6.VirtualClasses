@@ -24,9 +24,6 @@
     <ClCompile Include="Point.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Line.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Base.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -53,19 +50,19 @@
     <ClInclude Include="Base.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="bLine.h">
+    <ClInclude Include="bArc.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="bArc.h">
+    <ClInclude Include="bLine.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="bLineWrapper.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="bSegment.h">
+    <ClInclude Include="bSector.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="bSector.h">
+    <ClInclude Include="bSegment.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

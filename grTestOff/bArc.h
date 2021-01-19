@@ -15,18 +15,5 @@ public:
         color.apply();
         draw();
     }
-
-    void draw()
-    {
-        drawarc(p1, r, angle, sweep);
-    }
-    //void Print()
-    //{
-    //    //printf("%d. %s\n", order, name);
-    //    vc << Base::order << ". " << Base::name <<
-    //        ": x = " << coor.getCoor(0) <<
-    //        ", y = " << coor.getCoor(1) << "\n\n";
-    //    TFlush();
-    //}
 };
 

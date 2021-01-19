@@ -15,25 +15,5 @@ public:
         color.apply();
         draw();
     }
-
-    /*void move(Point offset)
-    {
-        bcolor.apply();
-        draw();
-        p1 = p1 + offset;
-        p2 = p2 + offset;
-    }*/
-    void draw()
-    {
-        drawline(p1, p2);
-    }
-    //void Print()
-    //{
-    //    //printf("%d. %s\n", order, name);
-    //    vc << Base::order << ". " << Base::name <<
-    //        ": x = " << coor.getCoor(0) << 
-    //        ", y = " << coor.getCoor(1) << "\n\n";
-    //    TFlush();
-    //}
 };
 
