@@ -20,12 +20,6 @@ public:
 	{
 
 	}
-	void move(Point offset)
-	{
-		bArc::move(offset);
-		bLine::move(offset);
-		bLineWrapper::move(offset);
-	}
 
 	void draw()
 	{
@@ -33,17 +27,5 @@ public:
 		bLine::draw();
 		bLineWrapper::draw();
 	}
-
-	//void Print()
-	//{
-	//	bArc::Print();
-	//	bLine::Print();
-	//	bLineWrapper::Print();
-	//	//printf("%d. %s\n", order, name);
-	//	vc << Base::order << ". " << Base::name <<
-	//		": x = " << bArc::coor.getCoor(0) <<
-	//		", y = " << bArc::coor.getCoor(1) << "\n\n";
-	//	TFlush();
-	//}
 };
 

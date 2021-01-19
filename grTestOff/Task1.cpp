@@ -4,6 +4,9 @@
 #include "Arc.h"
 #include "bLine.h"
 #include "bArc.h"
+#include "bSegment.h"
+#include "bLineWrapper.h"
+#include "bSector.h"
 
 #define M_PI 3.1415926
 
@@ -23,15 +26,19 @@ int main(void)
 	//arc.translate(Point(10,40)); // Figure->seg = new bSegment
 	//line.translate(Point(10, 40)); // Base->sec = new bSector
 	//seg.translate(Point(50, 70)); // удаление через базовые классы
-	//sec->translate(Point(80, -20)); // координаты привязать к точке привязки
+	//sec->translate(Point(80, -20)); // координаты привязать к точке привязки +
 
 	//Base::PrintAll();
 
-	bLine line(Point(100, 25), Point(50, 100), Point(0, 0), Color::RED());
+	bLineWrapper line(Point(100, 25), Point(50, 100), Point(0, 0), Color::RED());
 	bArc arc(Point(100, 100), 30, 2, 1, Point(50, 100), Color::RED());
+	bSegment seg(Point(150, 150), 30, 0, 1.5, Point(150, 150), Color::GREEN());
+	bSector sec(Point(0, 0), 50, -0.5, 1.5, Point(100, 200), Color::BLUE());
 
 	vgetchar();
 	Base::PrintAll();
+
+	sec.translate(Point(20, 50));
 
 	vgetchar();
 	return 0;

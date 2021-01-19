@@ -25,7 +25,7 @@ public:
 	}
 	~Base()
 	{
-		//head = next; // TODO: нормальное удаление
+		//head = next; // TODO: нормальное удаление +
 		Base* temp = head;
 		if (temp == this)
 		{

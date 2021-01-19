@@ -9,8 +9,8 @@ public:
         bLine(p1, p2, p, c, s),
         Figure(p, c, s)
     {
-        color.apply();
-        draw();
+        //color.apply();
+        //draw();
     }
 };
 

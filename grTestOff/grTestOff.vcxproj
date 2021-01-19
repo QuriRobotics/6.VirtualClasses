@@ -150,18 +150,9 @@
     <ClInclude Include="bArc.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="bLine.h" />
-    <ClInclude Include="bLineWrapper.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="bSector.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="bSegment.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="bLineWrapper.h" />
+    <ClInclude Include="bSector.h" />
+    <ClInclude Include="bSegment.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="Line.h" />
