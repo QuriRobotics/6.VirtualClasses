@@ -27,13 +27,13 @@ public:
     {
         drawline(p1, p2);
     }
-    void Print()
-    {
-        //printf("%d. %s\n", order, name);
-        vc << Base::order << ". " << Base::name <<
-            ": x = " << coor.getCoor(0) << 
-            ", y = " << coor.getCoor(1) << "\n\n";
-        TFlush();
-    }
+    //void Print()
+    //{
+    //    //printf("%d. %s\n", order, name);
+    //    vc << Base::order << ". " << Base::name <<
+    //        ": x = " << coor.getCoor(0) << 
+    //        ", y = " << coor.getCoor(1) << "\n\n";
+    //    TFlush();
+    //}
 };
 

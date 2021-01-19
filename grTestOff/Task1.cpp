@@ -24,7 +24,7 @@ int main(void)
 
 	arc.translate(Point(10,40)); // Figure->seg = new bSegment
 	line.translate(Point(10, 40)); // Base->sec = new bSector
-	seg.translate(Point(50, 70));
+	seg.translate(Point(50, 70)); // удаление через базовые классы
 	sec->translate(Point(80, -20)); // координаты привязать к точке привязки
 
 	Base::PrintAll();

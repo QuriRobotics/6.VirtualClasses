@@ -140,10 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Arc.cpp" />
     <ClCompile Include="Base.cpp" />
-    <ClCompile Include="Color.cpp" />
-    <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Task1.cpp" />

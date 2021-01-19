@@ -28,15 +28,15 @@ public:
 		bLine::draw();
 	}
 
-	void Print()
-	{
-		bArc::Print();
-		bLine::Print();
-		//printf("%d. %s\n", order, name);
-		vc << Base::order << ". " << Base::name <<
-			": x = " << bArc::coor.getCoor(0) <<
-			", y = " << bArc::coor.getCoor(1) << "\n\n";
-		TFlush();
-	}
+	//void Print()
+	//{
+	//	bArc::Print();
+	//	bLine::Print();
+	//	//printf("%d. %s\n", order, name);
+	//	vc << Base::order << ". " << Base::name <<
+	//		": x = " << bArc::coor.getCoor(0) <<
+	//		", y = " << bArc::coor.getCoor(1) << "\n\n";
+	//	TFlush();
+	//}
 };
 

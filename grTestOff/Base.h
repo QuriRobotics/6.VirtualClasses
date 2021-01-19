@@ -28,13 +28,13 @@ public:
 		head = next; // нормальное удаление
 	}
 
-	virtual void Print() = 0;
-	//virtual void Print() // это нормально, раскомментить
-	//{
-	//	//printf("%d. %s\n", order, name);
-	//	vc << order << ". " << name << "\n";
-	//	TFlush();
-	//}
+	//virtual void Print() = 0;
+	virtual void Print() // это нормально, раскомментить
+	{
+		//printf("%d. %s\n", order, name);
+		vc << order << ". " << name << "\n";
+		TFlush();
+	}
 	static void PrintAll()
 	{
 		Base* tmp = head;
