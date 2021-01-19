@@ -15,5 +15,10 @@ public:
         color.apply();
         draw();
     }
+    ~bLine()
+    {
+        bcolor.apply();
+        draw();
+    }
 };
 

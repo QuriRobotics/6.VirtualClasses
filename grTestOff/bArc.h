@@ -15,5 +15,10 @@ public:
         color.apply();
         draw();
     }
+    ~bArc()
+    {
+        bcolor.apply();
+        draw();
+    }
 };
 

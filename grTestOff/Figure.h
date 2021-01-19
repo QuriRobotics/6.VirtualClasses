@@ -32,6 +32,10 @@ public:
 		color.apply();
 		draw();
 	}
+	virtual ~Figure()
+	{
+
+	}
 
 	virtual void draw() = 0;
 };

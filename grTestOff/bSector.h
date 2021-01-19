@@ -20,7 +20,6 @@ public:
 	{
 
 	}
-
 	void draw()
 	{
 		bArc::draw();

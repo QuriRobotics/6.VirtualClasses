@@ -12,5 +12,9 @@ public:
         //color.apply();
         //draw();
     }
+    /*~bLineWrapper()
+    {
+        bLine::~bLine();
+    }*/
 };
 

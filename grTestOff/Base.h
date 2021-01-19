@@ -23,13 +23,17 @@ public:
 
 		head = this;
 	}
-	~Base()
+	virtual ~Base()
 	{
 		//head = next; // TODO: нормальное удаление +
 		Base* temp = head;
 		if (temp == this)
 		{
 			head = next;
+			return;
+		}
+		if (temp == NULL)
+		{
 			return;
 		}
 		while (temp->next != this)
@@ -54,7 +58,7 @@ public:
 		{
 			tmp->Print();
 			tmp = tmp->next;
-			Sleep(1);
+			Sleep(10);
 		}
 	}
 };
